@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import Navigation from "./components/common/navbar/navbar"
+import MidContainer from "./components/dashboard/mainContainer/midcontainer";
+import Application from "./components/dashboard/application/application";
+// import DownArrow from "./components/dashboard/application/downarrow";
+import Requiring from "./components/dashboard/application/requiring";
+import Prospect from "./components/dashboard/application/prospect";
+import Quoting from "./components/dashboard/quoting/quoting";
+import EligibilityCheck from "./components/dashboard/eligibilitycheck/eligibilitycheck";
+import ScopeOfAppointment from "./components/dashboard/scope/scope";
+import { Route, Routes } from "react-router-dom"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+   <>
+   {/* <Navigation/> */}
+   {/* <MidContainer/> */}
+   {/* <Application/> */}
 
+   <Routes>
+    <Route path="/" element={<MidContainer/>} />
+    <Route path="/MidContainer" element={<MidContainer/>}/>
+    <Route path="/Quoting" element={<Quoting/>}/>
+        <Route path="/Application" element={<Application />}/> 
+        <Route path="/EligibilityCheck" element={<EligibilityCheck />}/>
+        <Route path="/ScopeOfAppointment" element={<ScopeOfAppointment />}/> 
+        {/* <Route path="/DownArrow" element={<DownArrow />}/>  */}
+
+        <Route path="/Requiring" element={<Requiring/>}/> 
+        <Route path="/Prospect" element={<Prospect/>}/> 
+          </Routes>
+
+   </>
+  )
+}
 export default App;
