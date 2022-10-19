@@ -10,17 +10,17 @@ import {
    WholeContent, Main, H5, H2, Box, MainHeader, Number, SubBox, SecondPage, LabelContent, Page, Button, ButtonClear, SearchBox, SearchBar,
    ButtonTag, Input, SearchImg, SubCart, Status, Select, Date, Sub, BodyContent
    , Ppo, First, Name, Content, P, BoxTag, Imageset, DateContent, Register
-   , Action, HeadingTag, Para, LinkContent
+   , Action, HeadingTag, Para, LinkContent, Paragraph, LabelTag, Option
 } from "../application/applicationstyle"
 // import Footer from "../../common/footer/footer"
 export default function Application() {
    const [shown, isShown] = useState(false);
-const handleClick = event => { isShown(current => !current);  }
+   const handleClick = event => { isShown(current => !current); }
 
-const [text, setText ] = useState('');
+   const [text, setText] = useState('');
 
- return (
- 
+   return (
+
 
       <>
          <Navigation />
@@ -35,7 +35,7 @@ const [text, setText ] = useState('');
             <Box>
                <MainHeader>
                   <H2>{content.manage}</H2>
-                  <p>{content.view}</p>
+                  <Paragraph>{content.view}</Paragraph>
                </MainHeader>
 
                <SubBox>
@@ -43,7 +43,7 @@ const [text, setText ] = useState('');
 
                      <SearchBar>
                         <SearchBox>
-                           <Input  type="text" placeholder="search last name" onChange={(e) => setText(e.target.value)} />
+                           <Input type="text" placeholder="search last name" onChange={(e) => setText(e.target.value)} />
                            <SearchImg src={images.search} />
                         </SearchBox>
 
@@ -66,16 +66,16 @@ const [text, setText ] = useState('');
                      <Status>
 
                         <LabelContent>
-                           <label>Status</label>
+                           <LabelTag>Status</LabelTag>
                            <Select >
-                              <option>choose option</option>
-                              <option>yes</option>
-                              <option>no</option>
+                              <Option>choose option</Option>
+                              <Option>yes</Option>
+                              <Option>no</Option>
                            </Select>
                         </LabelContent>
 
                         <LabelContent>
-                           <label>Date</label>
+                           <LabelTag>Date</LabelTag>
                            <Date type="date" />
                         </LabelContent>
                      </Status>
@@ -89,13 +89,13 @@ const [text, setText ] = useState('');
             </Box>
          </WholeContent>
 
-      
+
 
          {details.filter(product =>
-          product.name.toLowerCase().includes(text.toLowerCase()),
-        ).map(discription => {
+            product.name.toLowerCase().includes(text.toLowerCase()),
+         ).map(discription => {
             return (
-              
+
                <>
                   <BoxTag>
                      <First>
@@ -132,18 +132,18 @@ const [text, setText ] = useState('');
                   {
                      shown && <DownArrow />
                   }
-                
+
                </>
-            
+
 
 
             );
          })}
          <>
-         <Footer/>
+            <Footer />
          </>
 
       </>
    )
-  
+
 }

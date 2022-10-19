@@ -77,16 +77,32 @@ export const Ham=styled.div`
 display: flex;
 justify-content: right;
 border: none;
-background-color: white;
+/* background-color: white; */
 align-content: center;
+background-color: #CACACA;
 /* display: none; */
+padding: 8px;
+font-size: 14px;
 
 `;
 
 
 export const HamContent=styled.div`
+
+
 `;
 
 export const Icon=styled.div`
-border: 1px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+/* border: 1px solid black; */
+
+width: 28%;
+position: absolute;
+z-index: 1;
+top: 7%;
+/* right: 0; */
+left: 72%;
+
 `;

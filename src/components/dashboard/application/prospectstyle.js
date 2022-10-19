@@ -11,13 +11,17 @@ row-gap:1rem;
 
 export const SearchInput = styled.div`
 display:flex;
-justify-content:space-between;
+/* justify-content:space-between; */
 width:30%;
 border:1px solid grey;
 border-radius:5px;
+width: 25%;
+padding: 5px;
+
 `
 export const Inputs = styled.input`
 border:none;
+width: 100%
 `
 
 export const Buttons = styled.button`
@@ -45,6 +49,9 @@ justify-content:flex-end;
 export const InputBox = styled.div`
 display:flex;
 justify-content:space-between;
+border: none;
+padding-bottom:4px;
+width: 100%;
 `
 export const Numbers = styled.input`
 width:30%;`
@@ -56,6 +63,7 @@ background-color:blue;
 color:white;
 border:none;
 border-radius:6px;
+
 &:hover{
   background-color:white;
   color:blue;

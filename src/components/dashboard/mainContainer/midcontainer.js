@@ -2,14 +2,14 @@ import dashboardContent from "../../../data/mainContainer";
 import { images } from "../../../resources/image";
 import { content } from "../../../resources/string";
 import Navigation from "../../common/navbar/navbar";
-import {  Content, MidImage, HeadingContent, ParagraphContent, Container, P, 
-    Last, FooterContent, FooterSubContent, FooterImg,Cart} from "./midContainerStyle";
+import {  Content, MidImage, HeadingContent, ParagraphContent, Container, Para, 
+    Last, FooterContent, FooterSubContent, FooterImg,Cart,WholePage,P} from "./midContainerStyle";
 import { Link } from "react-router-dom";
 import Footer from "../../common/footer/footer";
 export default function MidContainer() {
     return (
         <>
-        <div>
+        <WholePage>
             <Navigation/>
             <Container>
                 {/* <Card> */}
@@ -49,29 +49,30 @@ export default function MidContainer() {
                 <FooterSubContent>
                     <Cart>
                    <FooterImg src={images.help}/>
-                  <P>{content.help}</P>
+                  <Para>{content.help}</Para>
                   </Cart>
 
                   <Cart>
                   <FooterImg src={images.producer}/>
-                  <P>{content.producer}</P>
+                  <Para>{content.producer}</Para>
                   </Cart>
 
                   <Cart>
                   <FooterImg src={images.point}/>
-                  <P>{content.sales}</P>
+                  <Para>{content.sales}</Para>
                   </Cart>
                   <Cart>
                   <FooterImg src={images.medicare}/>
-                  <P>{content.center}</P>
+                  <Para>{content.center}</Para>
                   </Cart>
                  
                 </FooterSubContent>
             </Last>
            
-        </div>  
+        
      
-         <Footer/>   
+         <Footer/>  
+         </WholePage>   
      </>
 
            
