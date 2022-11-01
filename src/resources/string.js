@@ -88,7 +88,10 @@ export const details = [
        
         num:"B5X16685",
         no:"ACN No",
-        action:"Action Needed"
+        action:"Action Needed",
+        // moreDetails: { 
+        //     status: 
+        // }
     },
     {
         name:"MAHE,VAISHNAVIM",
@@ -235,9 +238,31 @@ export const prospectpage =[
 },
 
 ];
+
+const prospectpopup='Customer Information'
+const verifytext='Verify the primary appplicants Name and email address.'
+const popupname='Name'
+const popupmail='Email Address'
+ const popupcontent='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quos autem consequatur atque, necessitatibus molestiae beatae consequuntur quia qui architecto dolor rem molestias voluptatem quis alias, accusamus earum eligendi soluta harum. Voluptates alias dolorem dolore optio dolores molestiae quos tempore ducimus consequatur. Assumenda officiis accusamus ea exercitationem sint, dolore illum!'
+const additional='Additional Information'
+const informationpopup='uss this space to provide additional information in the email to your customer.Text entered in this box will only appear on this email notification to be retained.'
+const max='Max 2000 characters'
+
+//not found
+const error='Yikes! We Cant Find That Page'
+const first='We are unable to locate the page you are trying to view.'
+const second='This could be due to mistyped address or the link may be out of date.'
+const third='Please visit our login page.Login Page'
+
+
+
 export const content = {home , quoting, customerCheck,scopeOfAppointment,providerSearch,application,logout, quoteHeading,customerHeading,scopeHeading,
  checkHeading,quoteContent,customerContent,eligibilityContent,scopeContent,checkContent,heading,headingContent,headerContent,help,producer,sales,center
 ,applicationHeading,information,prospect,manage,view
 ,status,dob,dateofbirth,zipcode,zip,country
 ,value,cell,phone,upadte,dateupdate,pdf,none,welcome,card,recall,transfer
-,hra,response,need,outreach,late,create,leave,member,popup,removecontent,removename,legalprivacy,app}
+,hra,response,need,outreach,late,create
+,leave,member,popup,removecontent,removename,
+legalprivacy,app,prospectpopup,verifytext,
+popupmail,popupname,popupcontent,
+additional,informationpopup,max,error,first,second,third}

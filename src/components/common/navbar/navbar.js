@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { NavigationBar, Navitems, Sidecontent,Icon,NavigationBarResponsive,Ham,HamContent, Para,Logo, NavWrapper, Line } from "./navbarstyle";
+import { NavigationBar, Navitems, Sidecontent,Icon,Logo1,NavigationBarResponsive,Ham,HamContent, Para,Logo, NavWrapper, Line } from "./navbarstyle";
 import { content } from "../../../resources/string";
 import { images } from "../../../resources/image";
-// import Footer from "../footer/footer";
-// import Navbar1 from "../hamburger/hamburger";
 import {useState } from 'react';
+import { LastContent } from "../../dashboard/mainContainer/midcontainer";
 
 function Navigation() {
     const [isMobile,setIsMobile]=useState(false)
-  function handleChange(){
+    const [shown, isShown] = useState(false);
+  function HandleChange(){
     setIsMobile(!isMobile);
+    isShown(current => !current);
+   }
 
-  }
+
     return (
         <>
 
@@ -36,9 +38,11 @@ function Navigation() {
                    </Sidecontent>
 
                 <NavigationBarResponsive>
-        <div onClick={()=>handleChange()}>
+
+        <div onClick={()=>HandleChange()}>
       {
         isMobile ? (<img src={images.wrong} />):(<img src={images.hamburger} />)
+        
       }
         </div>
   
@@ -47,18 +51,19 @@ function Navigation() {
             </NavigationBar>
             <Icon>
             {isMobile && (<Ham> <Line to='/MidContainer'><HamContent>{content.home}</HamContent></Line></Ham>)}
-            
-            {isMobile && (<Ham> <Line to='/Quoting'><HamContent>{content.quoting}</HamContent></Line></Ham>)}
+             {isMobile && (<Ham> <Line to='/Quoting'><HamContent>{content.quoting}</HamContent></Line></Ham>)}
             {isMobile && (<Ham> <Line  to='/Application'><HamContent>{content.application}</HamContent></Line></Ham>)}
             {isMobile && (<Ham> <Line to='/ScopeOfAppointment'><HamContent>{content.scopeOfAppointment}</HamContent></Line></Ham>)}
             {isMobile && (<Ham> <Line to='/EligibilityCheck'><HamContent>{content.customerCheck}</HamContent></Line></Ham>)}
             {isMobile && (<Ham> <Line to='/ProviderSearch'> <HamContent>{content.providerSearch}</HamContent></Line></Ham>)}
-
-            </Icon>
-            {/* <HamIcon>
-           <Navbar1/>
-           </HamIcon> */}
+            {isMobile &&(<Ham> <Logo src={images.icon} /><HamContent>{content.logout}</HamContent></Ham>)}
+            
+             </Icon>
+             {/* { shown && <LastContent/> } */}
+          
+           
         </>
+        
 
     )
 }

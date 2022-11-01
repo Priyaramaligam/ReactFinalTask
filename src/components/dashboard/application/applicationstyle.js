@@ -2,27 +2,21 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const SecondPage = styled.div`
 padding:1rem;
-
 `;
 export const LinkContent = styled(Link)`
 text-decoration: none;
 color: black;
 `;
+
 export const WholeContent = styled.div`
 margin: 10px;
 padding: 10px;
-/* text-decoration: none; */
-
 `;
 
 export const Main = styled.div`
-/* position: relative; */
-display: flex;
-/* top:50px; */
-/* margin: 0 auto; */
-/* padding: 30px; */
-gap:2rem;
 
+display: flex;
+gap:2rem;
 `;
 
 export const H5 = styled.h5`
@@ -44,8 +38,6 @@ margin: 0 auto;
 export const MainHeader = styled.div`
 display: flex;
 justify-content: space-between;
-/* padding:20px; */
-
 `;
 
 export const SubBox = styled.div`
@@ -53,8 +45,7 @@ display: flex;
 justify-content: space-between;
 gap:1rem;
 width: 90%;
-/* margin: 0 auto; */
-/* height: 10px; */
+
 @media(max-width:768px){
     display: flex;
     justify-content: space-between;
@@ -73,18 +64,14 @@ display: flex;
  justify-content: space-between;
    
 @media (max-width: 768px) {
-    
-    width: 48%
-    /* padding: 3px; */
-
-    
-}
+     width: 48%
+ }
 
 `;
 
 export const Input = styled.input`
 border: none;
-/* padding-bottom:4px; */
+
 @media (max-width: 768px) {
     width: 70%;
     font-size: 10px;
@@ -94,8 +81,7 @@ border: none;
 export const SearchBar = styled.div`
 display: flex;
 justify-content:space-between;
-/* width: 30%; */
-/* gap:2rem; */
+
 @media (max-width: 768px) {
     width: 100%;
     gap:1rem;
@@ -107,7 +93,7 @@ justify-content:space-between;
 export const ButtonTag = styled.div`
 display:flex;
 gap:1rem;
-/* margin:25px; */
+
 padding: 4% 2%;
 @media (max-width: 768px) {
     width: 50%;
@@ -117,14 +103,14 @@ padding: 4% 2%;
 export const Button = styled.button`
 background-color: blue;
 border-radius: 10px;
-/* width:25%; */
+
 padding: 7px;
 color: white;
 width: 37%;
 border: none;
 &:hover{background-color:white;color:black}
 @media (max-width: 768px) {
-   /* padding: 1rem; */
+ 
    width: 80%;
 }
 
@@ -137,7 +123,7 @@ align-items: center;
 export const Date = styled.input`
 border: 1px solid black;
 border-radius: 10px;
-/* width:100%; */
+
 padding: 5px;
 @media (max-width: 768px) {
     padding:3px;
@@ -158,8 +144,7 @@ export const Status = styled.div`
 display: flex;
 justify-content: space-between
 ;
-/* align-items: center; */
- /* align-items: center; */
+
  @media (max-width: 768px) {
     gap:1rem;
     font-size: 12px;
@@ -176,10 +161,8 @@ width: 47%;
 
 `;
 export const Select = styled.select`
-/* border: 1px solid black;
- */
+
  padding: 7px;
- /* width: 50%; */
  border-radius: 10px;
  @media (max-width: 768px) {
     width: 100%;
@@ -193,11 +176,7 @@ export const Option = styled.option`
 font-size: 10px;
 `;
 
-// export const Dot=styled.div`
-// display: flex;
-// align-items: center;
-// height: 20px;
-// `;
+
 export const SubCart = styled.div`
 width: 55%;
 margin-top: 18px;
@@ -213,7 +192,7 @@ margin-top: 18px;
 
 export const Sub = styled.div`
 width:45%;
-/* padding: 1rem; */
+
 @media(max-width:768px){
     width: 49%;
 }

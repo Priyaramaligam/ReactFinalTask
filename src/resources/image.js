@@ -39,6 +39,8 @@ import glass from "../assets/images/glass.png"
 // import profile from "../assets/images/profile.png"
 import hamburger from "../assets/images/hamburger.png"
 
+//notfound
+import notfound from "../assets/images/notfound.png"
 
 export const images={icon,quoting,customer,scope,eligibility,helptool,producertool,customerpoint,medicare,help,producer,point,medical,
-search,down,action,pdf,recall,transfer,hra,response,create,remove,writing,glass,wrong,hamburger}
+search,down,action,pdf,recall,transfer,hra,response,create,remove,writing,glass,wrong,hamburger,notfound}

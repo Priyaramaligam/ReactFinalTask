@@ -8,6 +8,7 @@ import Quoting from "./components/dashboard/quoting/quoting";
 import EligibilityCheck from "./components/dashboard/eligibilitycheck/eligibilitycheck";
 import ScopeOfAppointment from "./components/dashboard/scope/scope";
 import { Route, Routes } from "react-router-dom"
+import PageNotFound from "./components/common/pagenotfound/pagenotfound";
 function App() {
   return (
    <>
@@ -22,10 +23,11 @@ function App() {
         <Route path="/Application" element={<Application />}/> 
         <Route path="/EligibilityCheck" element={<EligibilityCheck />}/>
         <Route path="/ScopeOfAppointment" element={<ScopeOfAppointment />}/> 
-        {/* <Route path="/DownArrow" element={<DownArrow />}/>  */}
+       
 
         <Route path="/Requiring" element={<Requiring/>}/> 
         <Route path="/Prospect" element={<Prospect/>}/> 
+        <Route path="*" element={<PageNotFound/>}/>
           </Routes>
 
    </>

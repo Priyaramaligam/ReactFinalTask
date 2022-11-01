@@ -2,12 +2,13 @@ import { content, page, require } from "../../../resources/string"
 import { images } from "../../../resources/image"
 import Navigation from "../../common/navbar/navbar"
 import { useState } from "react"
+import { ManageApplication } from "../../common/pagecontent/pagecontent"
 import { Link } from "react-router-dom"
 // import DownArrow from "../application/downarrow"
 import {
     WholeContent, Main, H5, H2, Box, MainHeader, Number, SubBox, SecondPage, LabelContent, Page, Button,
     ButtonClear, SearchBox, SearchBar, ButtonTag, Input, SearchImg, SubCart, Status, Select, Date, Sub, BodyContent,
-    First, Name, Content, Footer1, SubFooter, Action, Para, Ppo, DateContent, BoxTag, Imageset, HeadingTag, LinkContent,
+    First,Paragraph,Option,LabelTag, Name, Content, Footer1, SubFooter, Action, Para, Ppo, DateContent, BoxTag, Imageset, HeadingTag, LinkContent,
 } from "../application/applicationstyle"
 import Footer from "../../common/footer/footer"
 export default function Requiring() {
@@ -34,64 +35,70 @@ export default function Requiring() {
                         <H5>  {content.information}</H5>
                         <LinkContent to='/Prospect'> <H5> {content.prospect}</H5></LinkContent>
                     </Main>
-                    <Box>
-                        <MainHeader>
-                            <H2>{content.manage}</H2>
-                            <p>{content.view}</p>
-                        </MainHeader>
+                    
+                  
+        <>
+      
 
-                        <SubBox>
-                            <SubCart>
+            <Box>
+               <MainHeader>
+                  <H2>{content.manage}</H2>
+                  <Paragraph>{content.view}</Paragraph>
+               </MainHeader>
 
-                                <SearchBar>
-                                    <SearchBox>
-                                        <Input type="text" placeholder="search last name" onChange={(e) => setText(e.target.value)}  />
-                                        <SearchImg src={images.search} />
-                                    </SearchBox>
+               <SubBox>
+                  <SubCart>
 
-                                    <SearchBox>
-                                        <Input type="text" placeholder="search last name"  onChange={(e) => setText(e.target.value)} />
-                                        <SearchImg src={images.search} />
-                                    </SearchBox>
-                                </SearchBar>
+                     <SearchBar>
+                        <SearchBox>
+                           <Input type="text" placeholder="search first name" onChange={(e) => setText(e.target.value)} />
+                           <SearchImg src={images.search} />
+                        </SearchBox>
 
-                                <ButtonTag>
-                                    <Button>Search</Button>
+                        <SearchBox>
+                           <Input type="text" placeholder="search last name" onChange={(e) => setText(e.target.value)} />
+                           <SearchImg src={images.search} />
+                        </SearchBox>
+                     </SearchBar>
 
-                                    <ButtonClear>Clear</ButtonClear>
-                                </ButtonTag>
+                     <ButtonTag>
+                        <Button>Search</Button>
 
-                            </SubCart>
+                        <ButtonClear>Clear</ButtonClear>
+                     </ButtonTag>
 
-                            <Sub>
+                  </SubCart>
 
-                                <Status>
+                  <Sub>
 
-                                    <LabelContent>
-                                        <label>Status</label>
-                                        <Select >
-                                            <option>choose option</option>
-                                            <option>yes</option>
-                                            <option>no</option>
-                                        </Select>
-                                    </LabelContent>
+                     <Status>
 
-                                    <LabelContent>
-                                        <label>Date</label>
-                                        <Date type="date" />
-                                    </LabelContent>
-                                </Status>
+                        <LabelContent>
+                           <LabelTag>Status</LabelTag>
+                           <Select >
+                              <Option>choose option</Option>
+                              <Option>yes</Option>
+                              <Option>no</Option>
+                           </Select>
+                        </LabelContent>
 
-                                <Page>
-                                    <label>Page</label>
-                                    <Number type="number" />
-                                </Page>
+                        <LabelContent>
+                           <LabelTag>Date</LabelTag>
+                           <Date type="date" />
+                        </LabelContent>
+                     </Status>
 
-
-                            </Sub>
-                        </SubBox>
-
-                    </Box>
+                     <Page>
+                        <label>Page</label>
+                        <Number type="number" />
+                     </Page>
+                  </Sub>
+               </SubBox>
+            </Box>
+ 
+</>
+   
+                   
                 </WholeContent>
                 {page.filter(product =>
           product.namecontent.toLowerCase().includes(text.toLowerCase()),
@@ -141,190 +148,6 @@ export default function Requiring() {
             )
         })}
     
-                
-                {/* <BodyContent>
-                    <BoxTag>
-                        <First>
-
-                            <Imageset >
-
-                                <Name onClick={handleClick} src={images.down} />
-                            </Imageset>
-
-                            <Content>
-                                <HeadingTag>{content.namecontent}</HeadingTag>
-                            </Content>
-
-                        </First>
-                       
-
-                        <Ppo>
-                            <Para>{content.account}</Para>
-                            <Para>{content.accountnum}</Para>
-                        </Ppo>
-
-                        <DateContent>
-                            <Para>{content.last}</Para>
-                            <Para>{content.limit}</Para>
-                        </DateContent>
-
-                        <Action>
-                            <Name src={images.response} />
-                            <Para>{content.respond}</Para>
-                        </Action>
-                        <Action>
-                            <Name src={images.pdf} />
-                            <Para>{content.pdf}</Para>
-                        </Action>
-                      
-                    </BoxTag>
-                    {
-                            shown && <Last />} */}
-
-{/* 
-                    <BoxTag>
-                        <First>
-
-                            <Imageset >
-
-                                <Name onClick={handleClick1} src={images.down} />
-                            </Imageset>
-
-                            <Content>
-                                <HeadingTag>{content.namecontent}</HeadingTag>
-                            </Content>
-
-
-                        </First>
-                        <Ppo>
-                            <Para>{content.account}</Para>
-                            <Para>{content.accountnum}</Para>
-                        </Ppo>
-                        <DateContent>
-                            <Para>{content.last}</Para>
-                            <Para>{content.limit}</Para>
-                        </DateContent>
-
-                        <Action>
-                            <Name src={images.response} />
-                            <Para>{content.respond}</Para>
-                        </Action>
-                        <Action>
-                            <Name src={images.pdf} />
-                            <Para>{content.pdf}</Para>
-                        </Action>
-
-
-                    </BoxTag>
-                    {
-                        shown1 && <Last />}
-            
-                <BoxTag>
-                    <First>
-
-                        <Imageset >
-
-                            <Name onClick={handleClick2} src={images.down} />
-                        </Imageset>
-
-                        <Content>
-                            <HeadingTag>{content.namecontent}</HeadingTag>
-
-                        </Content>
-                    </First>
-                    <Ppo>
-                        <Para>{content.account}</Para>
-                        <Para>{content.accountnum}</Para>
-                    </Ppo>
-                    <DateContent>
-                        <Para>{content.last}</Para>
-                        <Para>{content.limit}</Para>
-                    </DateContent>
-                    <Action>
-                        <Name src={images.response} />
-                        <Para>{content.respond}</Para>
-                    </Action>
-                    <Action>
-                        <Name src={images.pdf} />
-                        <Para>{content.pdf}</Para>
-                    </Action>
-
-
-                </BoxTag>
-                {
-                    shown2 && <Last />}
-                <BoxTag>
-                    <First>
-
-                        <Imageset >
-
-                            <Name onClick={handleClick3} src={images.down} />
-                        </Imageset>
-
-                        <Content>
-                            <HeadingTag>{content.namecontent}</HeadingTag>
-
-                        </Content>
-                    </First>
-                    <Ppo>
-                        <Para>{content.account}</Para>
-                        <Para>{content.accountnum}</Para>
-                    </Ppo>
-                    <DateContent>
-                        <Para>{content.last}</Para>
-                        <Para>{content.limit}</Para>
-                    </DateContent>
-                    <Action>
-                        <Name src={images.response} />
-                        <Para>{content.respond}</Para>
-                    </Action>
-                    <Action>
-                        <Name src={images.pdf} />
-                        <Para>{content.pdf}</Para>
-                    </Action>
-
-
-
-                </BoxTag>
-                {
-                    shown3 && <Last />} */}
-
-{/* 
-                <BoxTag>
-                    <First>
-
-                        <Imageset >
-
-                            <Name onClick={handleClick4} src={images.down} />
-                        </Imageset>
-
-                        <Content>
-                            <HeadingTag>{content.namecontent}</HeadingTag>
-
-                        </Content>
-                    </First>
-                    <Ppo>
-                        <Para>{content.account}</Para>
-                        <Para>{content.accountnum}</Para>
-                    </Ppo>
-                    <DateContent>
-                        <Para>{content.last}</Para>
-                        <Para>{content.limit}</Para>
-                    </DateContent>
-                    <Action>
-                        <Name src={images.response} />
-                        <Para>{content.respond}</Para>
-                    </Action>
-                    <Action>
-                        <Name src={images.pdf} />
-                        <Para>{content.pdf}</Para>
-                    </Action>
-
-
-                </BoxTag>
-                {
-                    shown4 && <Last />} */}
-                    {/* </BodyContent> */}
                    </SecondPage>
                  <Footer/>
 

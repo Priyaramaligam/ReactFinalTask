@@ -1,13 +1,9 @@
 import styled from "styled-components";
+import "../../../styles/font.css"
 
-// export const DashContent=styled.div`
-// background-color: red;
-// position: absolute;
-
-
-// `;
 export const WholePage =styled.div`
 position: relative;
+
 `;
 
 export const Content = styled.div`
@@ -39,20 +35,26 @@ margin-left:1rem;
 export const MidImage = styled.img`
 
 
+
 `;
 
 
 export const HeadingContent = styled.h1`
-font-size: 15px;
+font-size: 12px;
+font-family: "DMSerifDisplay-Italic";
 @media (max-width: 768px) {
     font-size: 11px;
 }
 `;
-
+export const H5 =styled.h5`
+font-size: 12px;
+font-family: "DMSerifDisplay-Italic";
+`;
 export const ParagraphContent = styled.div`
-font-size:13px;
+font-size:12px;
+font-family:"DMSerifDisplay-Italic";
 @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 10px;
 }
 `;
 
@@ -82,7 +84,6 @@ gap:6px;
 justify-content: space-around;
 padding: 1rem 3rem;
 
-/* top:6rem; */
 `;
 
 
@@ -124,10 +125,25 @@ gap:1rem;
  export const Para=styled.p`
  margin: 0;
  color: blue;
+ font-family:"DMSerifDisplay-Italic";
+ font-size: 12px;
  @media (max-width: 768px) {
     font-size: 11px;
 }
 
  `;
  export const P=styled.p`
+           `;
+export const FooterWrapper = styled.div`
+position: absolute;
+ top:35rem;
+ width: 98%;
+ @media (max-width: 768px) {
+    top:35rem;
+ }
+ 
+ 
+
  `;
+
+

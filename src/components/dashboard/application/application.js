@@ -3,7 +3,10 @@ import { images } from "../../../resources/image"
 import { useState } from "react"
 import Navigation from "../../common/navbar/navbar"
 import { Link } from "react-router-dom"
+
 import DownArrow from "../application/downarrow"
+import { ManageApplication } from "../../common/pagecontent/pagecontent"
+
 import Footer from "../../common/footer/footer"
 // import { details } from "../../../resources/string"
 import {
@@ -17,21 +20,28 @@ export default function Application() {
    const [shown, isShown] = useState(false);
    const handleClick = event => { isShown(current => !current); }
 
-   const [text, setText] = useState('');
+   const [text,setText] = useState('');
 
    return (
 
 
       <>
          <Navigation />
-         {/* <SecondPage> */}
+   
+         
          <WholeContent>
+        
             <Main>
 
                <H5> {content.applicationHeading}</H5>
                <LinkContent to='/Requiring'> <H5>  {content.information}</H5> </LinkContent>
                <LinkContent to='/Prospect'> <H5> {content.prospect}</H5></LinkContent>
+               
             </Main>
+           
+        <>
+      
+
             <Box>
                <MainHeader>
                   <H2>{content.manage}</H2>
@@ -43,7 +53,7 @@ export default function Application() {
 
                      <SearchBar>
                         <SearchBox>
-                           <Input type="text" placeholder="search last name" onChange={(e) => setText(e.target.value)} />
+                           <Input type="text" placeholder="search first name" onChange={(e) => setText(e.target.value)} />
                            <SearchImg src={images.search} />
                         </SearchBox>
 
@@ -87,6 +97,12 @@ export default function Application() {
                   </Sub>
                </SubBox>
             </Box>
+ 
+</>
+   
+    
+
+           
          </WholeContent>
 
 

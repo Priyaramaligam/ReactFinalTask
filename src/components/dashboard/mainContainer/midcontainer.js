@@ -3,7 +3,7 @@ import { images } from "../../../resources/image";
 import { content } from "../../../resources/string";
 import Navigation from "../../common/navbar/navbar";
 import {  Content, MidImage, HeadingContent, ParagraphContent, Container, Para, 
-    Last, FooterContent, FooterSubContent, FooterImg,Cart,WholePage,P} from "./midContainerStyle";
+    Last, FooterContent, FooterSubContent, FooterImg,Cart,WholePage,P,H5,FooterWrapper} from "./midContainerStyle";
 import { Link } from "react-router-dom";
 import Footer from "../../common/footer/footer";
 export default function MidContainer() {
@@ -19,7 +19,7 @@ export default function MidContainer() {
                         return (
                             
                             <>
-                                {/* <Dot> */}
+                                
                                 <Content>
 
                                     <MidImage src={e.image} />
@@ -30,28 +30,42 @@ export default function MidContainer() {
                                         {e.paragraph}
                                     </ParagraphContent>
                                 </Content>
-                                {/* </Dot> */}
+                             
                             </>
                         )
                     }
                     )
                     
                 }
-            {/* </Card> */}
+           
             </Container>
          
+            <LastContent/>
+           
+        <FooterWrapper>
+     
+         <Footer/> 
+         </FooterWrapper> 
+         </WholePage>   
+     </>
+
+           
+            )
+      }
+      export const LastContent=() =>{
+        return(
             <Last>
                <FooterContent>
-                  <h5>{content.heading} </h5>
+                  <H5>{content.heading} </H5>
                    <P>{content.headingContent}</P> 
-                   <p>{content.headerContent}</p> 
+                   <P>{content.headerContent}</P> 
                </FooterContent>
                 <FooterSubContent>
                     <Cart>
                    <FooterImg src={images.help}/>
                   <Para>{content.help}</Para>
                   </Cart>
-
+                       
                   <Cart>
                   <FooterImg src={images.producer}/>
                   <Para>{content.producer}</Para>
@@ -68,14 +82,6 @@ export default function MidContainer() {
                  
                 </FooterSubContent>
             </Last>
-           
-        
-     
-         <Footer/>  
-         </WholePage>   
-     </>
-
-           
-            )
+        )
       }
 

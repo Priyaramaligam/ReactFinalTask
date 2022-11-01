@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer=styled.div`
-/* border: 2px solid white; */
+
 background-color: white;
 padding: 20px 40px;
 
@@ -24,7 +24,6 @@ margin: 0px;
 export const SubContent=styled.div`
 display: flex;
 flex-direction: column;
-
 row-gap:3rem;
 
 `;
@@ -43,7 +42,7 @@ width:12%
 `
 
 export const Cards=styled.div`
-/* width: 12%; */
+
 `;
 export const Cart=styled.div`
 background-color: blue;

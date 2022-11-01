@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "LexendDeca-Bold";
+    src: url("../assets/font/Lexend_Deca/static/LexendDeca-Bold.ttf");
+}
+@font-face {
+    font-family: "DMSerifDisplay-Italic";
+    src: url("../assets/font//Lexend_Deca/static/LexendDeca-Regular.ttf");
+}
+@font-face {
+    font-family: "DMSerifDisplay-Italic";
+    src: url("../assets/font/DM_Serif_Display/DMSerifDisplay-Italic.ttf");
+}
+@font-face {
+    font-family: "DMSerifDisplay-Italic";
+    src: url("../assets/font/DM_Serif_Display/DMSerifDisplay-Regular.ttf")
+}
+
+
