@@ -15,7 +15,7 @@ import medical from "../assets/images/medicarecertificate.png"
 //application-img-search
 
 import search from "../assets/images/search.png"
-
+import uparrow from "../assets/images/uparrow.png"
 import down from "../assets/images/down.png"
 import action from "../assets/images/warning.png"
 
@@ -43,4 +43,4 @@ import hamburger from "../assets/images/hamburger.png"
 import notfound from "../assets/images/notfound.png"
 
 export const images={icon,quoting,customer,scope,eligibility,helptool,producertool,customerpoint,medicare,help,producer,point,medical,
-search,down,action,pdf,recall,transfer,hra,response,create,remove,writing,glass,wrong,hamburger,notfound}
+search,down,action,pdf,recall,transfer,hra,response,create,remove,writing,glass,wrong,hamburger,notfound,uparrow}

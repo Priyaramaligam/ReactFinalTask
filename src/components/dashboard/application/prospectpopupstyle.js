@@ -158,7 +158,7 @@ left: 0;
 right: 0;
 bottom: 0;
 position: fixed;
-background:rgba(188, 181, 185, 0.3);
+background:rgba(188, 181, 185, 0.8);
 opacity:0.5 ;
 `;
 

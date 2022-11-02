@@ -1,18 +1,18 @@
 import { content } from "../../../resources/string";
 import { images } from "../../../resources/image";
 
-import { MainContainer, Heading, SubContent, H1, Cart, P, End,ImgTag,Sub,SubCard,Cards,SubDetails} from "./donwarrowstyle";
+import { MainContainer, Heading, SubContent, H5, Cart, P, End,ImgTag,Sub,SubCard,Cards,SubDetails} from "./donwarrowstyle";
 // import Application from "./application";
 // import Navigation from "../../common/navbar/navbar";
 
 export default function DownArrow() {
     return (
         <>
-            {/* <Application/> */}
+        
             <Cart>
-            <MainContainer>
+              <MainContainer>
                 <Heading>
-                    <H1>{content.status}</H1>
+                    <H5>{content.status}</H5>
                 </Heading>
                 <SubContent>
                     <Sub>
@@ -62,9 +62,14 @@ export default function DownArrow() {
                     <SubDetails>
                         <ImgTag src={images.hra}/>
                         <P>{content.hra}</P>
-                        {/* <div>xcjkdkl</div> */}
+                      
+                    </SubDetails>
+                    <SubDetails>
+                        
+                      
                     </SubDetails>
                     </Sub>
+
                <SubCard>
                     <Cards>
                         <P>{content.need}</P>

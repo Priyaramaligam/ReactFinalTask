@@ -85,7 +85,6 @@ export const details = [
         core:"Core (Regional PPO)",
         date:"09/15/2021",
         request:"Requested Effective Date",
-       
         num:"B5X16685",
         no:"ACN No",
         action:"Action Needed",

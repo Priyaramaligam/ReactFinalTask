@@ -33,6 +33,9 @@ box-shadow: 1px 1px 1px 1px grey;
 padding:15px;
 width: 98%;
 margin: 0 auto;
+@media (max-width: 768px) {
+    width: 96%;
+}
 
 `;
 export const MainHeader = styled.div`
@@ -267,9 +270,9 @@ display: flex;
 `;
 export const Imageset = styled.div`
 width: 25%;
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     display: none;
-}
+} */
 `;
 export const Ppo = styled.div`
 display: flex;
@@ -299,8 +302,11 @@ margin: 0;
 `;
 
 export const Footer1 = styled.div`
-background-color: blue;
+background-color:rgba(65, 154, 249, 0.99);
 padding: 30px 28px 28px 30px;
+width: 85%;
+margin: 0 auto;
+border-radius: 5px;
 
 
 /* background-color: white; */
@@ -309,6 +315,9 @@ export const SubFooter = styled.div`
 background-color: white;
 padding: 20px 40px;
 border-radius: 1rem;
+width: 90%;
+border-radius: 5px;
+margin: 0 auto;
 /* padding: 20px 40px; */
 /* padding: 100px; */
 `;

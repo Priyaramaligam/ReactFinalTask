@@ -16,146 +16,125 @@ import {
    , Action, HeadingTag, Para, LinkContent, Paragraph, LabelTag, Option
 } from "../application/applicationstyle"
 // import Footer from "../../common/footer/footer"
+import ApplicationContent from "./applicationcomponet"
+
 export default function Application() {
    const [shown, isShown] = useState(false);
    const handleClick = event => { isShown(current => !current); }
 
-   const [text,setText] = useState('');
+   const [text, setText] = useState('');
 
    return (
-
-
-      <>
+    <>
          <Navigation />
-   
-         
+
+
          <WholeContent>
-        
+
             <Main>
 
                <H5> {content.applicationHeading}</H5>
                <LinkContent to='/Requiring'> <H5>  {content.information}</H5> </LinkContent>
                <LinkContent to='/Prospect'> <H5> {content.prospect}</H5></LinkContent>
-               
+
             </Main>
-           
-        <>
-      
 
-            <Box>
-               <MainHeader>
-                  <H2>{content.manage}</H2>
-                  <Paragraph>{content.view}</Paragraph>
-               </MainHeader>
-
-               <SubBox>
-                  <SubCart>
-
-                     <SearchBar>
-                        <SearchBox>
-                           <Input type="text" placeholder="search first name" onChange={(e) => setText(e.target.value)} />
-                           <SearchImg src={images.search} />
-                        </SearchBox>
-
-                        <SearchBox>
-                           <Input type="text" placeholder="search last name" onChange={(e) => setText(e.target.value)} />
-                           <SearchImg src={images.search} />
-                        </SearchBox>
-                     </SearchBar>
-
-                     <ButtonTag>
-                        <Button>Search</Button>
-
-                        <ButtonClear>Clear</ButtonClear>
-                     </ButtonTag>
-
-                  </SubCart>
-
-                  <Sub>
-
-                     <Status>
-
-                        <LabelContent>
-                           <LabelTag>Status</LabelTag>
-                           <Select >
-                              <Option>choose option</Option>
-                              <Option>yes</Option>
-                              <Option>no</Option>
-                           </Select>
-                        </LabelContent>
-
-                        <LabelContent>
-                           <LabelTag>Date</LabelTag>
-                           <Date type="date" />
-                        </LabelContent>
-                     </Status>
-
-                     <Page>
-                        <label>Page</label>
-                        <Number type="number" />
-                     </Page>
-                  </Sub>
-               </SubBox>
-            </Box>
- 
-</>
-   
-    
-
-           
-         </WholeContent>
+            <>
 
 
+               <Box>
+                  <MainHeader>
+                     <H2>{content.manage}</H2>
+                     <Paragraph>{content.view}</Paragraph>
+                  </MainHeader>
 
-         {details.filter(product =>
-            product.name.toLowerCase().includes(text.toLowerCase()),
-         ).map(discription => {
-            return (
+                  <SubBox>
+                     <SubCart>
 
-               <>
-                  <BoxTag>
-                     <First>
-                        <Imageset >
-                           <Name onClick={handleClick} src={images.down} />
-                        </Imageset>
-                        <Content>
-                           <HeadingTag>{discription.name}</HeadingTag>
-                           <P>{discription.process}</P>
-                        </Content>
+                        <SearchBar>
+                           <SearchBox>
+                              <Input type="text" placeholder="search first name" onChange={(e) => setText(e.target.value)} />
+                              <SearchImg src={images.search} />
+                           </SearchBox>
 
-                     </First>
+                           <SearchBox>
+                              <Input type="text" placeholder="search last name" onChange={(e) => setText(e.target.value)} />
+                              <SearchImg src={images.search} />
+                           </SearchBox>
+                        </SearchBar>
 
-                     <Ppo>
-                        <Para>{discription.access}</Para>
-                        <Para>{discription.core}</Para>
-                     </Ppo>
+                        <ButtonTag>
+                           <Button>Search</Button>
 
-                     <DateContent>
-                        <Para>{discription.date}</Para>
-                        <Para>{discription.request}</Para>
-                     </DateContent>
+                           <ButtonClear>Clear</ButtonClear>
+                        </ButtonTag>
 
-                     <Register>
-                        <Para>{discription.num}</Para>
-                        <Para>{discription.no}</Para>
-                     </Register>
+                     </SubCart>
 
-                     <Action>
-                        <Name src={images.action} />
-                        <Para>{discription.action}</Para>
-                     </Action>
-                  </BoxTag>
-                  {
-                     shown && <DownArrow />
-                  }
+                     <Sub>
 
-               </>
+                        <Status>
+
+                           <LabelContent>
+                              <LabelTag>Status</LabelTag>
+                              <Select >
+                                 <Option>choose option</Option>
+                                 <Option>yes</Option>
+                                 <Option>no</Option>
+                              </Select>
+                           </LabelContent>
+
+                           <LabelContent>
+                              <LabelTag>Date</LabelTag>
+                              <Date type="date" />
+                           </LabelContent>
+                        </Status>
+
+                        <Page>
+                           <label>Page</label>
+                           <Number type="number" />
+                        </Page>
+                     </Sub>
+                  </SubBox>
+               </Box>
+
+            </>
+</WholeContent>
+
+
+{details.filter(product =>
+           product.name.toLowerCase().includes(text.toLowerCase()),
+        ).map(discription => {
+           return (
+
+              <>
+
+                              <ApplicationContent
+                                 name={discription.name}
+                                    process={discription.process}
+                                    //  down={discription.down}
+                                    //   uparrow={discription.uparrow}
+                                           access={discription.access}
+                                       core={discription.core}
+                                       date={discription.date}
+                                       request={discription.request}
+                                       num={discription.num}
+                                       no={discription.no}
+                                       action={discription.action}/>
+                                       
+                 
+               
+              </>
 
 
 
-            );
-         })}
-         <>
+           );
+        })}
+
+
+     
+
+       <>
             <Footer />
          </>
 

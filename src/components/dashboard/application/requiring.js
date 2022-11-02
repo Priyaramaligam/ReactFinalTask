@@ -11,6 +11,7 @@ import {
     First,Paragraph,Option,LabelTag, Name, Content, Footer1, SubFooter, Action, Para, Ppo, DateContent, BoxTag, Imageset, HeadingTag, LinkContent,
 } from "../application/applicationstyle"
 import Footer from "../../common/footer/footer"
+import RequiringContent from "./requiringcomponet"
 export default function Requiring() {
 
     const [shown, isShown] = useState(false);
@@ -106,44 +107,19 @@ export default function Requiring() {
        
             return (
               <>
-               <BoxTag>
-                        <First>
-
-                            <Imageset >
-
-                                <Name onClick={handleClick} src={images.down} />
-                            </Imageset>
-
-                            <Content>
-                                <HeadingTag>{discription.namecontent}</HeadingTag>
-                            </Content>
-
-                        </First>
-                       
-
-                        <Ppo>
-                            <Para>{discription.account}</Para>
-                            <Para>{discription.accountnum}</Para>
-                        </Ppo>
-
-                        <DateContent>
-                            <Para>{discription.last}</Para>
-                            <Para>{discription.limit}</Para>
-                        </DateContent>
-
-                        <Action>
-                            <Name src={images.response} />
-                            <Para>{discription.respond}</Para>
-                        </Action>
-                        <Action>
-                            <Name src={images.pdf} />
-                            <Para>{discription.pdf}</Para>
-                        </Action>
-                      
-                    </BoxTag>
-                    {
-                            shown && <Last />} 
-
+               < RequiringContent
+                                 namecontent={discription.namecontent}
+                                    
+                                     down={discription.down}
+                                    // up={discription.uparrow}
+                                           account={discription.account}
+                                           accountnum={discription.accountnum}
+                                           last={discription.last}
+                                           limit={discription.limit}
+                                           respond={discription.respond}
+                                           pdf={discription.pdf}
+                                           />
+                    
               </>  
             )
         })}
@@ -155,19 +131,5 @@ export default function Requiring() {
         </>
     )
 }
-function Last(){
-    return(
-<Footer1>
-<SubFooter>
-    <H5> {content.late}</H5>
-    <Para>{content.need}</Para>
-    <Para>{content.outreach}</Para>
-    <Para>{content.leave}</Para>
-    <Para>{content.member}</Para>
-</SubFooter>
 
-</Footer1>
-
-    )
-}
 
